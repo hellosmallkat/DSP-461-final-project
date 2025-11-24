@@ -1,57 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Hugging Face Model</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    iframe {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      width: 100%;
-      height: 600px;
-      /* you can change height as needed */
-    }
-    .footer {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 0.9em;
-      color: #555;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DSP 461 Project</title>
+
+<style>
+  /* ---------------------- Global Styles ---------------------- */
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #4c6ef5, #15aabf, #38d9a9);
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+    color: white;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* ---------------------- Navigation Bar ---------------------- */
+  nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  nav a {
+    margin: 0 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    color: #ffe066;
+  }
+
+  /* ---------------------- Header ---------------------- */
+  header {
+    text-align: center;
+    margin-top: 120px;
+    animation: fadeDown 1.2s ease forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-25px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+
+  /* ---------------------- Glass Container ---------------------- */
+  .glass-box {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    animation: fadeUp 1.3s ease forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ---------------------- Iframe ---------------------- */
+  iframe {
+    border: none;
+    width: 100%;
+    height: 550px;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.3);
+  }
+
+  /* ---------------------- Fallback Button ---------------------- */
+  .fallback-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #ffe066;
+    color: #333;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+  }
+
+  .fallback-button:hover {
+    background: #ffd43b;
+    transform: scale(1.05);
+  }
+
+  /* ---------------------- Footer ---------------------- */
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    opacity: 0.9;
+  }
+</style>
 </head>
+
 <body>
 
-  <header>
-    <h1>DSP 461 Website</h1>
-    <p>Interactive Hugging Face space embedded below:</p>
-  </header>
+<!-- Navigation Bar -->
+<nav>
+  <a href="#">Home</a>
+  <a href="https://huggingface.co/spaces/kat4everokay/DSP_461_Website" target="_blank">Open in HuggingFace</a>
+</nav>
 
- <iframe
-	src="https://kat4everokay-dsp-461-website.hf.space"
-	frameborder="0"
-	width="850"
-	height="450"
-></iframe>
+<!-- Header Content -->
+<header>
+  <h1>DSP 461 Interactive Demo</h1>
+  <p>Explore the Hugging Face Space below. If it doesn’t load, use the direct link.</p>
+</header>
 
+<!-- Glass Content Box -->
+<div class="glass-box">
+  <iframe
+    src="https://kat4everokay-dsp-461-website.hf.space"
+  ></iframe>
 
-  <div class="footer">
-    <p>
-      Powered by <a href="https://huggingface.co/spaces/kat4everokay/DSP_461_Website" target="_blank" rel="noopener">Hugging Face Space</a><br />
-      Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
-    </p>
-  </div>
+  <a class="fallback-button"
+     href="https://huggingface.co/spaces/kat4everokay/DSP_461_Website"
+     target="_blank">
+    Open Fullscreen Version
+  </a>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>
+    Powered by <strong>Hugging Face Spaces</strong><br/>
+    Hosted with <strong>GitHub Pages</strong>
+  </p>
+</footer>
 
 </body>
 </html>
