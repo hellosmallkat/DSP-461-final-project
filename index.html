@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Link of Predictor</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Hugging Face Model</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    iframe {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 100%;
+      height: 600px;
+      /* you can change height as needed */
+    }
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-    <h1>Test it out yourself</h1>
-    <iframe
-        src="https://huggingface.co/spaces/kat4everokay/DSP_461_Website?embed=true"
-        width="700"
-        height="500"
-        frameborder="0"
-    ></iframe>
+
+  <header>
+    <h1>DSP 461 Website</h1>
+    <p>Interactive Hugging Face space embedded below:</p>
+  </header>
+
+  <iframe
+    src="https://huggingface.co/spaces/kat4everokay/DSP_461_Website?embed=true"
+    title="DSP 461 Hugging Face Space"
+    allowfullscreen
+    loading="lazy"
+  ></iframe>
+
+  <div class="footer">
+    <p>
+      Powered by <a href="https://huggingface.co/spaces/kat4everokay/DSP_461_Website" target="_blank" rel="noopener">Hugging Face Space</a><br />
+      Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
+    </p>
+  </div>
+
 </body>
 </html>
